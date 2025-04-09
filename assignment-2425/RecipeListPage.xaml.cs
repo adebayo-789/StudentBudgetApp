@@ -1,19 +1,20 @@
 namespace assignment_2425;
 
-public partial class NewWindow1 : Window
+public partial class RecipeListPage : ContentPage
 {
-	public NewWindow1()
+	public RecipeListPage()
 	{
 		InitializeComponent();
-		Page = new ContentPage()
-		{
+		
 			Content = new VerticalStackLayout
 			{
 				Children = {
-					new Label { HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, Text = "Welcome to .NET MAUI!"
+					new Label { HorizontalOptions = LayoutOptions.Center, 
+								VerticalOptions = LayoutOptions.Center,
+								Text = "Welcome to .NET MAUI!"
 					}
 				}
-			}
-		};
+			};
+		
 	}
 }
