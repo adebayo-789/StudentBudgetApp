@@ -27,22 +27,32 @@
     <Color x:Key="Gray600">#404040</Color>
     <Color x:Key="Gray900">#212121</Color>
     <Color x:Key="Gray950">#141414</Color>
-
+    
     <SolidColorBrush x:Key="PageBackgroundBrush">
-        <AppThemeBinding Light="White" Dark="#121212" />
+        <SolidColorBrush.Color>
+            <AppThemeBinding Light="White" Dark="#121212" />
+        </SolidColorBrush.Color>
     </SolidColorBrush>
 
     <SolidColorBrush x:Key="PrimaryTextBrush">
-        <AppThemeBinding Light="Black" Dark="White" />
+        <SolidColorBrush.Color>
+            <AppThemeBinding Light="Black" Dark="White" />
+        </SolidColorBrush.Color>
     </SolidColorBrush>
 
     <SolidColorBrush x:Key="SecondaryTextBrush">
-        <AppThemeBinding Light="#404040" Dark="#CCCCCC" />
+        <SolidColorBrush.Color>
+            <AppThemeBinding Light="#404040" Dark="#CCCCCC" />
+        </SolidColorBrush.Color>
     </SolidColorBrush>
 
     <SolidColorBrush x:Key="FrameBackgroundBrush">
-        <AppThemeBinding Light="#F3F3F3" Dark="#1E1E1E" />
+        <SolidColorBrush.Color>
+            <AppThemeBinding Light="#F3F3F3" Dark="#1E1E1E" />
+        </SolidColorBrush.Color>
     </SolidColorBrush>
+
+
 
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
     <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}"/>

@@ -10,9 +10,10 @@
 
             <Label Text="App Settings"
                    FontSize="{DynamicResource AppFontSize}"
+                   TextColor="{DynamicResource PrimaryTextBrush} "
                    FontAttributes="Bold"
-                   HorizontalOptions="Center" 
-                   TextColor="{DynamicResource PrimaryTextBrush} "/>
+                   HorizontalOptions="Center" />
+                 
 
             
             <Label Text="Font Size"
@@ -30,7 +31,7 @@
                 </Picker.ItemsSource>
             </Picker>
 
-            <!-- Dark Mode Toggle -->
+            
             <Label Text="Dark Mode"
                    FontSize="{DynamicResource AppFontSize}" 
                    TextColor="{DynamicResource PrimaryTextBrush} " />
