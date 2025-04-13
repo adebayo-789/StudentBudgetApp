@@ -2,16 +2,19 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="assignment_2425.RecipeListPage"
-             Title="RecipeListPage">
+             Title="RecipeListPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
 
     <ScrollView>
         
         <VerticalStackLayout Padding="20" Spacing="20">
             
             <Label Text="Saved Recipes" 
-                   FontSize="22"
+                   FontSize="{DynamicResource AppFontSize}"
                    FontAttributes="Bold"
                    HorizontalOptions="Center" />
+                     
 
 
             <CollectionView x:Name="recipesCollectionView"
@@ -27,12 +30,12 @@
                             <StackLayout>
 
                                 <Label Text="{Binding Name}"
-                                       FontSize="18"
+                                       FontSize="{DynamicResource AppFontSize}"
                                        FontAttributes="Bold"/>
                                 <Label Text="{Binding Ingredients}"
                                        FontSize="14" />
                                 <Label Text="{Binding Steps}"
-                                       FontSize="14"
+                                       FontSize="{DynamicResource AppFontSize}"
                                        TextColor="Gray" />
                                 <Button
                                         x:Name="AddRecipeBtn"

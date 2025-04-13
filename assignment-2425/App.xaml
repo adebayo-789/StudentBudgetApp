@@ -5,9 +5,28 @@
              x:Class="assignment_2425.App">
     <Application.Resources>
         <ResourceDictionary>
+            <Color x:Key="PageBackgroundColor">White</Color>
+            <Color x:Key="TextColor">Black</Color>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="{DynamicResource AppFontSize}" />
+                <Setter Property="TextColor" Value="{DynamicResource TextColor}" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="FontSize" Value="{DynamicResource AppFontSize}" />
+                <Setter Property="TextColor" Value="{DynamicResource TextColor}" />
+            </Style>
+            <Style TargetType="Editor">
+                <Setter Property="FontSize" Value="{DynamicResource AppFontSize}" />
+                <Setter Property="TextColor" Value="{DynamicResource TextColor}" />
+            </Style>
+
+            
+            <x:Double x:Key="AppFontSize">16</x:Double>
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+                
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
