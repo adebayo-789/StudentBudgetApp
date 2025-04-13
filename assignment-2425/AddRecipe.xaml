@@ -2,51 +2,66 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="assignment_2425.AddRecipe"
-             Title="AddRecipe"
+             Title="Add Recipe"
              Background="{DynamicResource PageBackgroundBrush}">
-    
+
     <ScrollView>
-        <VerticalStackLayout  Padding="20" Spacing="15">
+        <VerticalStackLayout Padding="20" Spacing="20">
 
+            
             <Label Text="Add a New Recipe"
-            FontSize="20"
-            FontAttributes="Bold"
-            Margin="0,20,0,10" 
-             TextColor="{DynamicResource PrimaryTextBrush}"      />
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="{DynamicResource PrimaryTextBrush}" />
 
-            <Entry x:Name="recipeNameEntry"
-             Placeholder="Recipe Name"
-             FontSize="18" 
-             TextColor="{DynamicResource PrimaryTextBrush}"/>
+            
+            <Frame Padding="15"
+                   CornerRadius="15"
+                   BackgroundColor="{DynamicResource FrameBackgroundBrush}"
+                   BorderColor="{DynamicResource PrimaryTextBrush}"
+                   HasShadow="False">
 
-            <Editor x:Name="ingredientsEditor"
-            Placeholder="Ingredients"
-            AutoSize="TextChanges"
-            HeightRequest="80"
-            FontSize="16" 
-            TextColor="{DynamicResource PrimaryTextBrush}"/>
+                <VerticalStackLayout Spacing="15">
 
-            <Editor x:Name="descriptionEditor"
-            Placeholder="Description"
-            AutoSize="TextChanges"
-            HeightRequest="80"
-            FontSize="16" 
-            TextColor="{DynamicResource PrimaryTextBrush}"/>
+                    <Entry x:Name="recipeNameEntry"
+                           Placeholder="Recipe Title"
+                           FontSize="18"
+                           TextColor="{DynamicResource PrimaryTextBrush}" />
 
-            <Editor x:Name="stepsEditor"
-            Placeholder="Preparation Steps"
-            AutoSize="TextChanges"
-            HeightRequest="100"
-            FontSize="16" 
-            TextColor="{DynamicResource PrimaryTextBrush}"/>
+                    <Editor x:Name="descriptionEditor"
+                            Placeholder="Short Description"
+                            AutoSize="TextChanges"
+                            HeightRequest="80"
+                            FontSize="16"
+                            TextColor="{DynamicResource PrimaryTextBrush}" />
 
-            <Button Text="Add Recipe"
-            Clicked="OnAddRecipeClicked"
-            BackgroundColor="#4CAF50"
-            TextColor="White"
-            FontSize="18"
-            CornerRadius="10" />
+                    <Editor x:Name="ingredientsEditor"
+                            Placeholder="Ingredients (e.g. 2 eggs, 1 cup flour...)"
+                            AutoSize="TextChanges"
+                            HeightRequest="100"
+                            FontSize="16"
+                            TextColor="{DynamicResource PrimaryTextBrush}" />
 
+                    <Editor x:Name="stepsEditor"
+                            Placeholder="Preparation Steps"
+                            AutoSize="TextChanges"
+                            HeightRequest="120"
+                            FontSize="16"
+                            TextColor="{DynamicResource PrimaryTextBrush}" />
+
+                </VerticalStackLayout>
+            </Frame>
+
+            
+            <Button Text="Save Recipe"
+                    Clicked="OnAddRecipeClicked"
+                    BackgroundColor="{DynamicResource PrimaryColor}"
+                    TextColor="White"
+                    FontSize="18"
+                    CornerRadius="12"
+                    Padding="14"
+                    HorizontalOptions="Fill" />
 
         </VerticalStackLayout>
     </ScrollView>

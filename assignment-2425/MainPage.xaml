@@ -7,26 +7,35 @@
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
-            Spacing="25">
-
+            Spacing="30"
+            VerticalOptions="Center">
             <Label
-                Text="Recipe Pro"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" 
-                TextColor="{DynamicResource PrimaryTextColor}"   />
+                Text="🍽 Recipe Pro"
+                FontSize="36"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="{DynamicResource PrimaryTextBrush}" />
 
+            <!-- Subtitle -->
             <Label
-                Text="Quick and Easy Recipies"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" 
-                TextColor="{DynamicResource PrimaryTextColor}"/>
+                Text="Quick and Easy Recipes"
+                FontSize="20"
+                FontAttributes="Italic"
+                HorizontalOptions="Center"
+                TextColor="{DynamicResource SecondaryTextBrush}" />
 
-
+            <!-- CTA Button -->
             <Button
                 x:Name="RecipesBtn"
-                Text="My Recipies" 
+                Text="Browse My Recipes"
+                FontSize="18"
+                TextColor="White"
+                BackgroundColor="{DynamicResource PrimaryColor}"
+                CornerRadius="20"
+                Padding="14"
                 Clicked="OnMyRecipiesClicked"
                 HorizontalOptions="Fill" />
+            
         </VerticalStackLayout>
     </ScrollView>
 
