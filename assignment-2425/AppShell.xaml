@@ -13,4 +13,8 @@
         <ShellContent ContentTemplate="{DataTemplate local:RecipeListPage}" />
     </FlyoutItem>
 
+    <FlyoutItem Title="Settings">
+        <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}" />
+    </FlyoutItem>
+
 </Shell>
