@@ -1,6 +1,9 @@
 using System.Collections.ObjectModel;
-
+using Microsoft.Maui.Controls;
+using assignment_2425;
 namespace assignment_2425;
+
+
 
 public partial class RecipeListPage : ContentPage
 {
@@ -17,7 +20,12 @@ public partial class RecipeListPage : ContentPage
     public RecipeListPage()
     {
         InitializeComponent();
-        recipesCollectionView.ItemsSource = recipeList;
+        MessagingCenter.Subscribe<AddRecipe, Recipe>(this, "RecipeAdded", (sender, recipe) =>
+        {
+            recipeList.Add(recipe);
+            RecipeListView.ItemsSource = recipeList;
+        });
+      
     }
 
     private async void OnAddRecipeClicked(object sender, EventArgs e)

@@ -4,8 +4,9 @@
              x:Class="assignment_2425.AddRecipe"
              Title="AddRecipe"
              Background="{DynamicResource PageBackgroundBrush}">
+    
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout  Padding="20" Spacing="15">
 
             <Label Text="Add a New Recipe"
             FontSize="20"

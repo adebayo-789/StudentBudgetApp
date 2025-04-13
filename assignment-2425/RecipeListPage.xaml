@@ -2,12 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="assignment_2425.RecipeListPage"
-             Title="RecipeListPage"
+             Title="Recipe List"
              BackgroundColor="{DynamicResource PageBackgroundBrush}">
 
-
     <ScrollView>
-
         <VerticalStackLayout Padding="20" Spacing="20">
 
             <Label Text="Saved Recipes" 
@@ -16,54 +14,42 @@
                    HorizontalOptions="Center" 
                    TextColor="{DynamicResource PrimaryTextBrush}" />
 
-
-
-            <CollectionView x:Name="recipesCollectionView"
-                            HeightRequest="200" >
+            
+            <CollectionView x:Name="RecipeListView"
+                            HeightRequest="300">
                 <CollectionView.ItemTemplate>
-
                     <DataTemplate>
-
                         <Frame BorderColor="Gray"
                                CornerRadius="12"
                                Padding="10"
                                Margin="0,5"
                                Background="{DynamicResource FrameBackgroundBrush}">
-                            
-                            <StackLayout>
-
+                            <VerticalStackLayout Spacing="5">
                                 <Label Text="{Binding Name}"
                                        FontSize="{DynamicResource AppFontSize}"
-                                       TextColor="{DynamicResource TextBrush}"
-                                       FontAttributes="Bold"/>
+                                       FontAttributes="Bold"
+                                       TextColor="{DynamicResource TextBrush}" />
                                 <Label Text="{Binding Ingredients}"
-                                       FontSize="14" />
+                                       FontSize="14"
+                                       TextColor="{DynamicResource TextBrush}" />
                                 <Label Text="{Binding Steps}"
                                        FontSize="{DynamicResource AppFontSize}"
                                        TextColor="{DynamicResource PrimaryTextBrush}" />
-                                <Button
-                                        x:Name="AddRecipeBtn"
-                                        Text="Add Recipe" 
-                                        Clicked="OnAddRecipeClicked"
-                                        HorizontalOptions="Fill" />
-
-                            </StackLayout>
-
+                            </VerticalStackLayout>
                         </Frame>
-
                     </DataTemplate>
-
                 </CollectionView.ItemTemplate>
-
             </CollectionView>
 
-
-
-
+            <!-- Add Recipe Button (outside list) -->
+            <Button
+                Text="Add Recipe"
+                Clicked="OnAddRecipeClicked"
+                HorizontalOptions="Center"
+                BackgroundColor="{DynamicResource PrimaryBrush}"
+                TextColor="White"
+                CornerRadius="10"
+                Padding="10,5" />
         </VerticalStackLayout>
-
-
     </ScrollView>
-
-
 </ContentPage>

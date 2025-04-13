@@ -1,6 +1,7 @@
 using System.Text.Json;
 using Microsoft.Maui.Controls;
 using System.Collections.Generic;
+using assignment_2425;
 
 namespace assignment_2425;
 
@@ -13,6 +14,13 @@ public partial class AddRecipe : ContentPage
 
     private async void OnAddRecipeClicked(object sender, EventArgs e)
     {
+        if (string.IsNullOrWhiteSpace(recipeNameEntry.Text))
+        {
+            await DisplayAlert("Missing Info", "Please enter a recipe title.", "OK");
+            return;
+        }
+
+        
         var newRecipe = new Recipe
         {
             Title = recipeNameEntry.Text,
@@ -21,17 +29,7 @@ public partial class AddRecipe : ContentPage
             Instructions = stepsEditor.Text
         };
 
-        var json = Preferences.Default.Get("SavedRecipes", string.Empty);
-        var list = string.IsNullOrWhiteSpace(json)
-            ? new List<Recipe>()
-            : JsonSerializer.Deserialize<List<Recipe>>(json);
-
-        list.Add(newRecipe);
-
-        var newJson = JsonSerializer.Serialize(list);
-        Preferences.Default.Set("SavedRecipes", newJson);
-
-        await DisplayAlert("Saved", "Your recipe has been saved!", "OK");
-        await Shell.Current.GoToAsync(".."); // Navigate back
+        await Shell.Current.GoToAsync("..", true); // Navigate back
+        MessagingCenter.Send(this, "RecipeAdded", newRecipe); // Send the recipe to whoever is listening
     }
 }
