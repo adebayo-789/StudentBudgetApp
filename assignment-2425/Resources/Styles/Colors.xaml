@@ -59,8 +59,5 @@
     <SolidColorBrush x:Key="Gray900Brush" Color="{StaticResource Gray900}"/>
     <SolidColorBrush x:Key="Gray950Brush" Color="{StaticResource Gray950}"/>
 
-    <SolidColorBrush x:Key="PageBackgroundBrush" Color="{DynamicResource PageBackgroundColor}" />
-    <SolidColorBrush x:Key="PrimaryTextBrush" Color="{DynamicResource PrimaryTextColor}" />
-    <SolidColorBrush x:Key="SecondaryTextBrush" Color="{DynamicResource SecondaryTextColor}" />
-    <SolidColorBrush x:Key="FrameBackgroundBrush" Color="{DynamicResource FrameBackgroundColor}" />
+  
 </ResourceDictionary>
