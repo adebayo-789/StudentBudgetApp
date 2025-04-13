@@ -34,6 +34,11 @@
                                 <Label Text="{Binding Steps}"
                                        FontSize="14"
                                        TextColor="Gray" />
+                                <Button
+                                        x:Name="AddRecipeBtn"
+                                        Text="Add Recipe" 
+                                        Clicked="OnAddRecipeClicked"
+                                        HorizontalOptions="Fill" /> 
 
                             </StackLayout>
                             
@@ -45,33 +50,7 @@
                 
             </CollectionView>
 
-            <Label Text="Add a New Recipe"
-                   FontSize="20"
-                   FontAttributes="Bold"
-                   Margin="0,20,0,10" />
-
-            <Entry x:Name="recipeNameEntry"
-                   Placeholder="Recipe Name"
-                   FontSize="18" />
-
-            <Editor x:Name="ingredientsEditor"
-                    Placeholder="Ingredients"
-                    AutoSize="TextChanges"
-                    HeightRequest="80"
-                    FontSize="16" />
-
-            <Editor x:Name="stepsEditor"
-                    Placeholder="Preparation Steps"
-                    AutoSize="TextChanges"
-                    HeightRequest="100"
-                    FontSize="16" />
-
-            <Button Text="Add Recipe"
-                    Clicked="OnAddRecipeClicked"
-                    BackgroundColor="#4CAF50"
-                    TextColor="White"
-                    FontSize="18"
-                    CornerRadius="10" />
+            
 
 
         </VerticalStackLayout>

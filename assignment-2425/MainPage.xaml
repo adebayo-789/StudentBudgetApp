@@ -9,7 +9,12 @@
             Spacing="25">
            
             <Label
-                Text="Hello Welcome to Recipe Pro"
+                Text="Recipe Pro"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                 Text="Quick and Easy Recipies"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 

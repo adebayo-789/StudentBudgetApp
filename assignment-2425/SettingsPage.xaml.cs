@@ -4,9 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace assignment_2425
+namespace assignment_2425;
+
+public partial class SettingPage : ContentPage
+
 {
-    internal class SettingsPage
-    {
-    }
+
+
+
+
+
+
+
 }
+

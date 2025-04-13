@@ -20,33 +20,9 @@ public partial class RecipeListPage : ContentPage
             recipesCollectionView.ItemsSource = recipeList;
         }
 
-        private async void OnAddRecipeClicked(object sender, EventArgs e)
-        {
-            string? name= recipeNameEntry.Text?.Trim();
-            string?ingredients = ingredientsEditor.Text?.Trim();
-            string?steps = stepsEditor.Text?.Trim();
+    private async void OnAddRecipeClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(AddRecipe));
+    }
 
-            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(ingredients) || string.IsNullOrEmpty(steps))
-            {
-                await DisplayAlert("Missing Info", "Please fill in all fields.", "OK");
-                return;
-            }
-
-            var newRecipe = new Recipe
-            {
-                Name = name,
-                Ingredients = ingredients,
-                Steps = steps
-            };
-
-            recipeList.Add(newRecipe);
-
-
-            recipeNameEntry.Text = "";
-            ingredientsEditor.Text = "";
-            stepsEditor.Text = "";
-
-            await DisplayAlert("Success", $"Recipe '{name}' added!", "OK");
-        }
-    
-}
+    }
