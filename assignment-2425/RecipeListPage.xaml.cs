@@ -12,17 +12,17 @@ public partial class RecipeListPage : ContentPage
     }
 
 
-        private ObservableCollection<Recipe> recipeList = new ObservableCollection<Recipe>();
+    private ObservableCollection<Recipe> recipeList = new ObservableCollection<Recipe>();
 
-        public RecipeListPage()
-        {
-            InitializeComponent();
-            recipesCollectionView.ItemsSource = recipeList;
-        }
+    public RecipeListPage()
+    {
+        InitializeComponent();
+        recipesCollectionView.ItemsSource = recipeList;
+    }
 
     private async void OnAddRecipeClicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync(nameof(AddRecipe));
     }
 
-    }
+}

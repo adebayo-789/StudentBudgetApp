@@ -13,7 +13,7 @@
                    FontAttributes="Bold"
                    HorizontalOptions="Center" />
 
-            
+            <!-- Font Size Picker -->
             <Label Text="Font Size"
                    FontSize="{DynamicResource AppFontSize}" />
             <Picker x:Name="fontSizePicker"
@@ -28,7 +28,7 @@
                 </Picker.ItemsSource>
             </Picker>
 
-           
+            <!-- Dark Mode Toggle -->
             <Label Text="Dark Mode"
                    FontSize="{DynamicResource AppFontSize}" />
             <Switch x:Name="darkModeSwitch"

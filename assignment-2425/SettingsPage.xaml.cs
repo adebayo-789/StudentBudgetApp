@@ -16,7 +16,7 @@ public partial class SettingsPage : ContentPage
     {
         InitializeComponent();
 
-        // Load saved settings
+       
         fontSizePicker.SelectedIndex = Preferences.Default.Get("FontSizeIndex", 1); // Default to Medium
         darkModeSwitch.IsToggled = Preferences.Default.Get("DarkMode", false);
 

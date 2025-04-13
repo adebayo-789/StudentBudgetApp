@@ -7,22 +7,22 @@
 
 
     <ScrollView>
-        
+
         <VerticalStackLayout Padding="20" Spacing="20">
-            
+
             <Label Text="Saved Recipes" 
                    FontSize="{DynamicResource AppFontSize}"
                    FontAttributes="Bold"
                    HorizontalOptions="Center" />
-                     
+
 
 
             <CollectionView x:Name="recipesCollectionView"
                             HeightRequest="200" >
                 <CollectionView.ItemTemplate>
-                    
+
                     <DataTemplate>
-                        
+
                         <Frame BorderColor="Gray"
                                CornerRadius="12"
                                Padding="10"
@@ -41,25 +41,25 @@
                                         x:Name="AddRecipeBtn"
                                         Text="Add Recipe" 
                                         Clicked="OnAddRecipeClicked"
-                                        HorizontalOptions="Fill" /> 
+                                        HorizontalOptions="Fill" />
 
                             </StackLayout>
-                            
+
                         </Frame>
-                        
+
                     </DataTemplate>
-                    
+
                 </CollectionView.ItemTemplate>
-                
+
             </CollectionView>
 
-            
+
 
 
         </VerticalStackLayout>
-        
-        
+
+
     </ScrollView>
-    
-    
+
+
 </ContentPage>
