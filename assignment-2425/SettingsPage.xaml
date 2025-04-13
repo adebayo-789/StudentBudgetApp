@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="assignment_2425.SettingsPage"
              Title="Settings"
-             BackgroundColor="{DynamicResource PageBackgroundColor}">
+             BackgroundColor="{DynamicResource PageBackgroundBrush}">
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20">
@@ -11,11 +11,13 @@
             <Label Text="App Settings"
                    FontSize="{DynamicResource AppFontSize}"
                    FontAttributes="Bold"
-                   HorizontalOptions="Center" />
+                   HorizontalOptions="Center" 
+                   TextColor="{DynamicResource PrimaryTextBrush} "/>
 
-            <!-- Font Size Picker -->
+            
             <Label Text="Font Size"
-                   FontSize="{DynamicResource AppFontSize}" />
+                   FontSize="{DynamicResource AppFontSize}" 
+                   TextColor="{DynamicResource PrimaryTextBrush} "/>
             <Picker x:Name="fontSizePicker"
                     Title="Select Font Size"
                     SelectedIndexChanged="OnFontSizeChanged">
@@ -30,7 +32,8 @@
 
             <!-- Dark Mode Toggle -->
             <Label Text="Dark Mode"
-                   FontSize="{DynamicResource AppFontSize}" />
+                   FontSize="{DynamicResource AppFontSize}" 
+                   TextColor="{DynamicResource PrimaryTextBrush} " />
             <Switch x:Name="darkModeSwitch"
                     Toggled="OnDarkModeToggled" />
 

@@ -5,8 +5,8 @@
              x:Class="assignment_2425.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="PageBackgroundColor">White</Color>
-            <Color x:Key="TextColor">Black</Color>
+            <Color x:Key="PageBackgroundColor">white</Color>
+                <Color x:Key="TextColor">Black</Color>
             <Style TargetType="Label">
                 <Setter Property="FontSize" Value="{DynamicResource AppFontSize}" />
                 <Setter Property="TextColor" Value="{DynamicResource TextColor}" />

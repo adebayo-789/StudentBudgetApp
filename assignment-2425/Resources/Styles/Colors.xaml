@@ -28,6 +28,22 @@
     <Color x:Key="Gray900">#212121</Color>
     <Color x:Key="Gray950">#141414</Color>
 
+    <SolidColorBrush x:Key="PageBackgroundBrush">
+        <AppThemeBinding Light="White" Dark="#121212" />
+    </SolidColorBrush>
+
+    <SolidColorBrush x:Key="PrimaryTextBrush">
+        <AppThemeBinding Light="Black" Dark="White" />
+    </SolidColorBrush>
+
+    <SolidColorBrush x:Key="SecondaryTextBrush">
+        <AppThemeBinding Light="#404040" Dark="#CCCCCC" />
+    </SolidColorBrush>
+
+    <SolidColorBrush x:Key="FrameBackgroundBrush">
+        <AppThemeBinding Light="#F3F3F3" Dark="#1E1E1E" />
+    </SolidColorBrush>
+
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
     <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}"/>
     <SolidColorBrush x:Key="TertiaryBrush" Color="{StaticResource Tertiary}"/>
@@ -42,4 +58,9 @@
     <SolidColorBrush x:Key="Gray600Brush" Color="{StaticResource Gray600}"/>
     <SolidColorBrush x:Key="Gray900Brush" Color="{StaticResource Gray900}"/>
     <SolidColorBrush x:Key="Gray950Brush" Color="{StaticResource Gray950}"/>
+
+    <SolidColorBrush x:Key="PageBackgroundBrush" Color="{DynamicResource PageBackgroundColor}" />
+    <SolidColorBrush x:Key="PrimaryTextBrush" Color="{DynamicResource PrimaryTextColor}" />
+    <SolidColorBrush x:Key="SecondaryTextBrush" Color="{DynamicResource SecondaryTextColor}" />
+    <SolidColorBrush x:Key="FrameBackgroundBrush" Color="{DynamicResource FrameBackgroundColor}" />
 </ResourceDictionary>

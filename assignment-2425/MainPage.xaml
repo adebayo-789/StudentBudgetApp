@@ -8,16 +8,18 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-           
+
             <Label
                 Text="Recipe Pro"
                 Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+                SemanticProperties.HeadingLevel="Level1" 
+                TextColor="{DynamicResource PrimaryTextColor}"   />
 
             <Label
-                 Text="Quick and Easy Recipies"
+                Text="Quick and Easy Recipies"
                 Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+                SemanticProperties.HeadingLevel="Level1" 
+                TextColor="{DynamicResource PrimaryTextColor}"/>
 
 
             <Button

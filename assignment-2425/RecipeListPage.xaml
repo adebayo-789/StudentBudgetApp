@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="assignment_2425.RecipeListPage"
              Title="RecipeListPage"
-             BackgroundColor="{DynamicResource PageBackgroundColor}">
+             BackgroundColor="{DynamicResource PageBackgroundBrush}">
 
 
     <ScrollView>
@@ -13,7 +13,8 @@
             <Label Text="Saved Recipes" 
                    FontSize="{DynamicResource AppFontSize}"
                    FontAttributes="Bold"
-                   HorizontalOptions="Center" />
+                   HorizontalOptions="Center" 
+                   TextColor="{DynamicResource PrimaryTextBrush}" />
 
 
 
@@ -26,17 +27,20 @@
                         <Frame BorderColor="Gray"
                                CornerRadius="12"
                                Padding="10"
-                               Margin="0,5">
+                               Margin="0,5"
+                               Background="{DynamicResource FrameBackgroundBrush}">
+                            
                             <StackLayout>
 
                                 <Label Text="{Binding Name}"
                                        FontSize="{DynamicResource AppFontSize}"
+                                       TextColor="{DynamicResource TextBrush}"
                                        FontAttributes="Bold"/>
                                 <Label Text="{Binding Ingredients}"
                                        FontSize="14" />
                                 <Label Text="{Binding Steps}"
                                        FontSize="{DynamicResource AppFontSize}"
-                                       TextColor="Gray" />
+                                       TextColor="{DynamicResource PrimaryTextBrush}" />
                                 <Button
                                         x:Name="AddRecipeBtn"
                                         Text="Add Recipe" 
