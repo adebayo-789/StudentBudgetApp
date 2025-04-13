@@ -1,13 +1,31 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/rNdN2Yn1)
+
 # Mobile Computing Assessment 24/25
 
-Use this README to:
-- Briefly describe your app
-- Keep track of features that you want to implement/have implemented
-- Any useful information that may help when marking
+# Recipe Notes App
 
-You can modify this file and the starter project as you see fit.
+This is a mobile app built with .NET MAUI that allows users to write down and save their own recipes. It provides a simple way to keep track of ingredients, steps, and personal cooking notes.
 
-You must **NOT** delete or modify the following files unless instructed by your tutor:
-- .gitignore
-- .gitattributes
+## Features
+
+-  Add a new recipe using a simple input field
+- Save and display recipes on a new page
+-  Basic navigation between pages
+- Error handling to prevent app crashes
+
+## Current Functionality
+
+- User enters a recipe title or note
+- If input is valid, they can start and view their recipe
+- Pages are styled simply for clean user experience
+
+
+##  How to Run
+
+1. Open the solution in Visual Studio
+2. Set the startup project to the app
+3. Choose an emulator (e.g. Android) or local machine (Windows)
+4. Build and run the project
+
+
+
+
