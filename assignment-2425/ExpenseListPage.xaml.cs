@@ -1,11 +1,11 @@
 using System.Collections.ObjectModel;
 using Microsoft.Maui.Controls;
-using assignment_2425;
-namespace assignment_2425;
+using StudentBudgetApp;
+namespace StudentBudgetApp;
 
 
 
-public partial class RecipeListPage : ContentPage
+public partial class ExpenseListPage : ContentPage
 {
     public class Recipe
     {
@@ -17,7 +17,7 @@ public partial class RecipeListPage : ContentPage
 
     private ObservableCollection<Recipe> recipeList = new ObservableCollection<Recipe>();
 
-    public RecipeListPage()
+    public ExpenseListPage()
     {
         InitializeComponent();
         MessagingCenter.Subscribe<AddRecipe, Recipe>(this, "RecipeAdded", (sender, recipe) =>

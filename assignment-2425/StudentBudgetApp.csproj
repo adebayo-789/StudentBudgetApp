@@ -63,10 +63,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="AddRecipe.xaml">
+	  <Compile Update="AddExpensePage.xaml.cs">
+	    <DependentUpon>AddExpensePage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="ExpenseListPage.xaml.cs">
+	    <DependentUpon>ExpenseListPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="DashboardPage.xaml.cs">
+	    <DependentUpon>DashboardPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="AddExpensePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="RecipeListPage.xaml">
+	  <MauiXaml Update="ExpenseListPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="SettingsPage.xaml">

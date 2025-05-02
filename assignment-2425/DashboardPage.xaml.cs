@@ -1,10 +1,10 @@
-﻿namespace assignment_2425
+﻿namespace StudentBudgetApp
 {
-    public partial class MainPage : ContentPage
+    public partial class DashboardPage : ContentPage
     {
         
 
-        public MainPage()
+        public DashboardPage()
         {
             InitializeComponent();
         }

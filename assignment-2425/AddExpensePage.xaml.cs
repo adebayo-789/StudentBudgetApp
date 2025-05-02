@@ -1,13 +1,13 @@
 using System.Text.Json;
 using Microsoft.Maui.Controls;
 using System.Collections.Generic;
-using assignment_2425;
+using StudentBudgetApp;
 
-namespace assignment_2425;
+namespace StudentBudgetApp;
 
-public partial class AddRecipe : ContentPage
+public partial class AddExpensePage : ContentPage
 {
-    public AddRecipe()
+    public AddExpensePage()
     {
         InitializeComponent();
     }
