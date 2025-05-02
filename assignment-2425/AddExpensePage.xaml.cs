@@ -21,7 +21,7 @@ public partial class AddExpensePage : ContentPage
         }
 
         
-        var newRecipe = new Recipe
+        var newRecipe = new Expense
         {
             Title = recipeNameEntry.Text,
             Description = descriptionEditor.Text,

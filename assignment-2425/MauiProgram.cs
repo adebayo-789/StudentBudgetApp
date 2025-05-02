@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using assignment_2425.ViewModels;
+using Microsoft.Extensions.Logging;
 
 namespace assignment_2425
 {
@@ -15,8 +16,11 @@ namespace assignment_2425
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            
+            builder.Services.AddSingleton<BudgetViewModel>();
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
