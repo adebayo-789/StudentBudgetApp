@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentBudgetApp.Models
+namespace StudendBudegtApp.Models
 {
     public class Expense
     {

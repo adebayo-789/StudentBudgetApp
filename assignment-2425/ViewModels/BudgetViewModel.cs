@@ -9,7 +9,7 @@ using StudentBudgetApp.ViewModels;
 
 
 
-namespace assignment_2425.ViewModels
+namespace StudentBudgetApp.ViewModels
 {
     public class Expense
     {

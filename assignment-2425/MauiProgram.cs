@@ -1,4 +1,4 @@
-﻿using assignment_2425.ViewModels;
+﻿using StudentBudgetApp.ViewModels;
 using Microsoft.Extensions.Logging;
 
 namespace assignment_2425
