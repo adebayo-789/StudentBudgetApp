@@ -63,7 +63,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="ViewModels\AddExpensePage.xaml.cs">
+	  <Compile Update="Pages\AddExpensePage.xaml.cs">
 	    <DependentUpon>AddExpensePage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="ViewModels\ExpenseListPage.xaml.cs">
