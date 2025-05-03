@@ -2,54 +2,26 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StudentBudgetApp.Pages.ExpenseListPage"
-             Title="Recipe List"
-             BackgroundColor="{DynamicResource PageBackgroundBrush}">
+             Title="Expenses">
 
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="20">
+    <VerticalStackLayout Padding="20">
+        <Label Text="Income" />
+        <Entry Text="{Binding Income}" Keyboard="Numeric" />
 
-            <Label Text="Saved Recipes" 
-                   FontSize="{DynamicResource AppFontSize}"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center" 
-                   TextColor="{DynamicResource PrimaryTextBrush}" />
+        <Label Text="Remaining" Margin="0,10,0,0"/>
+        <Label Text="{Binding Remaining}" FontSize="Large" FontAttributes="Bold" />
 
-            
-            <CollectionView x:Name="RecipeListView"
-                            HeightRequest="300">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame BorderColor="Gray"
-                               CornerRadius="12"
-                               Padding="10"
-                               Margin="0,5"
-                               Background="{DynamicResource FrameBackgroundBrush}">
-                            <VerticalStackLayout Spacing="5">
-                                <Label Text="{Binding Name}"
-                                       FontSize="{DynamicResource AppFontSize}"
-                                       FontAttributes="Bold"
-                                       TextColor="{DynamicResource TextBrush}" />
-                                <Label Text="{Binding Ingredients}"
-                                       FontSize="14"
-                                       TextColor="{DynamicResource TextBrush}" />
-                                <Label Text="{Binding Steps}"
-                                       FontSize="{DynamicResource AppFontSize}"
-                                       TextColor="{DynamicResource PrimaryTextBrush}" />
-                            </VerticalStackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+        <CollectionView ItemsSource="{Binding Expenses}" Margin="0,20,0,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <HorizontalStackLayout>
+                        <Label Text="{Binding Description}" />
+                        <Label Text="{Binding Amount}" HorizontalOptions="EndAndExpand" />
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
 
-            <!-- Add Recipe Button (outside list) -->
-            <Button
-                Text="Add Recipe"
-                Clicked="OnAddRecipeClicked"
-                HorizontalOptions="Center"
-                BackgroundColor="{DynamicResource PrimaryBrush}"
-                TextColor="White"
-                CornerRadius="10"
-                Padding="10,5" />
-        </VerticalStackLayout>
-    </ScrollView>
+        <Button Text="Add Expense" Clicked="OnAddExpenseClicked" Margin="0,20,0,0"/>
+    </VerticalStackLayout>
 </ContentPage>

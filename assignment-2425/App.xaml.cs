@@ -1,12 +1,12 @@
-﻿namespace assignment_2425
-{
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
+﻿using StudentBudgetApp.Pages;
 
-            MainPage = new AppShell();
-        }
+namespace StudentBudgetApp;
+
+public partial class App : Application
+{
+    public App(ExpenseListPage mainPage)
+    {
+        InitializeComponent();
+        MainPage = new NavigationPage(mainPage);
     }
 }

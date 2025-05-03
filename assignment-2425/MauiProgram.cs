@@ -1,29 +1,29 @@
-﻿using StudentBudgetApp.ViewModels;
+﻿using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging;
+using StudentBudgetApp.ViewModels;
 
-namespace assignment_2425
+
+namespace StudentBudgetApp;
+
+public static class MauiProgram
 {
-    public static class MauiProgram
+    public static MauiApp CreateMauiApp()
     {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
-
-            
-            builder.Services.AddSingleton<BudgetViewModel>();
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            });
 
 #if DEBUG
-            builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
 
-            return builder.Build();
-        }
+        builder.Services.AddSingleton<BudgetViewModel>();
+      
+        return builder.Build();
     }
 }

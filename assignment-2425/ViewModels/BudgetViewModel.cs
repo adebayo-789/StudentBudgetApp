@@ -1,52 +1,38 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Linq;
+using StudentBudgetApp.Models;
 
+namespace StudentBudgetApp.ViewModels;
 
-using StudentBudgetApp;
-using StudentBudgetApp.ViewModels;
-
-
-
-namespace StudentBudgetApp.ViewModels
+public class BudgetViewModel : INotifyPropertyChanged
 {
-    public class Expense
-    {
-        public string Name { get; set; }
-        public decimal Amount { get; set; }
-    }
+    public ObservableCollection<Expense> Expenses { get; set; } = new();
 
-    public class BudgetViewModel : INotifyPropertyChanged
+    private decimal _income;
+    public decimal Income
     {
-        private decimal income;
-
-        public decimal Income
+        get => _income;
+        set
         {
-            get => income;
-            set
+            if (_income != value)
             {
-                if (income != value)
-                {
-                    income = value;
-                    OnPropertyChanged();
-                    OnPropertyChanged(nameof(RemainingBalance));
-                }
+                _income = value;
+                OnPropertyChanged(nameof(Income));
+                OnPropertyChanged(nameof(Remaining));
             }
         }
-
-        public ObservableCollection<Expense> Expenses { get; set; } = new();
-
-        public decimal RemainingBalance => Income - Expenses.Sum(e => e.Amount);
-
-        public void AddExpense(string name, decimal amount)
-        {
-            Expenses.Add(new Expense { Name = name, Amount = amount });
-            OnPropertyChanged(nameof(RemainingBalance));
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged([CallerMemberName] string name = "") =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
+
+    public decimal Remaining => Income - Expenses.Sum(e => e.Amount);
+
+    public void AddExpense(string description, decimal amount)
+    {
+        Expenses.Add(new Expense { Description = description, Amount = amount });
+        OnPropertyChanged(nameof(Remaining));
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected void OnPropertyChanged(string name) =>
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 }

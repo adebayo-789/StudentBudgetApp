@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="assignment_2425.AppShell"
+    x:Class="StudentBudgetApp.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:StudentBudgetApp">
 
     <FlyoutItem Title="Home">
-        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        <ShellContent ContentTemplate="{DataTemplate local:DashboardPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Recipes">
-        <ShellContent ContentTemplate="{DataTemplate local:RecipeListPage}" />
+    <FlyoutItem Title="Expenses">
+        <ShellContent ContentTemplate="{DataTemplate local:ExpenseListPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Settings">
         <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Add Recipe">
-        <ShellContent ContentTemplate="{DataTemplate local:AddRecipe}" />
+    <FlyoutItem Title="Add Expense">
+        <ShellContent ContentTemplate="{DataTemplate local:AddExpensePage}" />
     </FlyoutItem>
 
 </Shell>
