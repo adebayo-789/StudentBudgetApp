@@ -66,7 +66,7 @@
 	  <Compile Update="Pages\AddExpensePage.xaml.cs">
 	    <DependentUpon>AddExpensePage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="ViewModels\ExpenseListPage.xaml.cs">
+	  <Compile Update="Pages\ExpenseListPage.xaml.cs">
 	    <DependentUpon>ExpenseListPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Pages\DashboardPage.xaml.cs">
