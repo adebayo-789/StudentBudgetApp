@@ -4,9 +4,8 @@ namespace StudentBudgetApp;
 
 public partial class App : Application
 {
-    public App(ExpenseListPage mainPage)
+    public App(ExpenseListPage DashboardPage)
     {
-        InitializeComponent();
-        MainPage = new NavigationPage(mainPage);
+ 
     }
 }
