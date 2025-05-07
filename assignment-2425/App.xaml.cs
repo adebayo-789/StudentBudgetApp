@@ -1,4 +1,5 @@
 ﻿using StudentBudgetApp.Pages;
+using StudentBudgetApp;
 
 namespace StudentBudgetApp;
 

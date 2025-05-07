@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace assignment_2425
+namespace StudentBudgetApp
 {
     public class Program
     {

@@ -1,42 +1,42 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StudentBudgetApp.DashboardPage"
-             BackgroundColor="{DynamicResource PageBackgroundColor}">
+             xmlns:vm="clr-namespace:StudentBudgetApp.ViewModels"
+             x:Class="StudentBudgetApp.Pages.DashboardPage"
+             Title="Dashboard">
+
+    <ContentPage.BindingContext>
+        <vm:BudgetViewModel />
+    </ContentPage.BindingContext>
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="30"
-            VerticalOptions="Center">
-            <Label
-                Text="🍽 Recipe Pro"
-                FontSize="36"
-                FontAttributes="Bold"
-                HorizontalOptions="Center"
-                TextColor="{DynamicResource PrimaryTextBrush}" />
+        <VerticalStackLayout Padding="20" Spacing="25">
 
-            <!-- Subtitle -->
-            <Label
-                Text="Quick and Easy Recipes"
-                FontSize="20"
-                FontAttributes="Italic"
-                HorizontalOptions="Center"
-                TextColor="{DynamicResource SecondaryTextBrush}" />
+            <Label Text="Dashboard"
+                   FontSize="32"
+                   HorizontalOptions="Center" />
 
-            <!-- CTA Button -->
-            <Button
-                x:Name="RecipesBtn"
-                Text="Browse My Recipes"
-                FontSize="18"
-                TextColor="White"
-                BackgroundColor="{DynamicResource PrimaryColor}"
-                CornerRadius="20"
-                Padding="14"
-                Clicked="OnMyRecipiesClicked"
-                HorizontalOptions="Fill" />
-            
+            <Frame BorderColor="Gray" CornerRadius="10" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="Total Income:" FontSize="20" />
+                    <Label Text="{Binding TotalIncome, StringFormat='£{0:F2}'}"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           TextColor="Green" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BorderColor="Gray" CornerRadius="10" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="Remaining Balance:" FontSize="20" />
+                    <Label Text="{Binding RemainingBalance, StringFormat='£{0:F2}'}"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           TextColor="DarkOrange" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Later: Add Pie Chart or Summary Section here -->
+
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>

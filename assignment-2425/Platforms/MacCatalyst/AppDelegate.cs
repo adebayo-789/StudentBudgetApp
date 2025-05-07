@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace assignment_2425
+namespace StudentBudgetApp
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

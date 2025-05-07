@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace assignment_2425
+namespace StudentBudgetApp
 {
     [Application]
     public class MainApplication : MauiApplication

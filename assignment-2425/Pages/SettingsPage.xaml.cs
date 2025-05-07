@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Storage;
+using StudentBudgetApp;
 
 
-namespace assignment_2425;
+namespace StudentBudgetApp.Pages;
 
 
 public partial class SettingsPage : ContentPage
