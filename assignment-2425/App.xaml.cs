@@ -7,6 +7,6 @@ public partial class App : Application
 {
     public App(ExpenseListPage DashboardPage)
     {
- 
+        MainPage = new AppShell();
     }
 }

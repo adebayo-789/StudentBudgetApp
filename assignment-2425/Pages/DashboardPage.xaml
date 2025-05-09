@@ -4,9 +4,6 @@
              x:Class="StudentBudgetApp.Pages.DashboardPage"
              Title="Dashboard">
 
-    <ContentPage.BindingContext>
-        <vm:BudgetViewModel />
-    </ContentPage.BindingContext>
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="25">
@@ -35,7 +32,7 @@
                 </VerticalStackLayout>
             </Frame>
 
-            <!-- Later: Add Pie Chart or Summary Section here -->
+            
 
         </VerticalStackLayout>
     </ScrollView>

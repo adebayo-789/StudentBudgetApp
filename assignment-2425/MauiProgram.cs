@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using StudentBudgetApp.ViewModels;
+using StudentBudgetApp.Pages;
 
 
 namespace StudentBudgetApp;
@@ -22,7 +23,11 @@ public static class MauiProgram
 #endif
 
         builder.Services.AddSingleton<BudgetViewModel>();
-      
+
+        builder.Services.AddSingleton<DashboardPage>();
+        builder.Services.AddSingleton<AddExpensePage>();
+        builder.Services.AddSingleton<ExpenseListPage>();
+
         return builder.Build();
     }
 }
