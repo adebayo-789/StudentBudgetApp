@@ -1,38 +1,75 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using StudentBudgetApp.Models;
 
 namespace StudentBudgetApp.ViewModels;
 
 public class BudgetViewModel : INotifyPropertyChanged
 {
-    public ObservableCollection<Expense> Expenses { get; set; } = new();
+    public ObservableCollection<Expense> Expenses { get; set; } = new ObservableCollection<Expense>();
 
-    private decimal _income;
-    public decimal Income
+    private decimal totalIncome;
+    private decimal totalExpenses;
+    private decimal remainingBalance;
+    public decimal TotalIncome
     {
-        get => _income;
+        get => totalIncome;
         set
         {
-            if (_income != value)
+            if (totalIncome != value)
             {
-                _income = value;
-                OnPropertyChanged(nameof(Income));
-                OnPropertyChanged(nameof(Remaining));
+                totalIncome = value;
+                OnPropertyChanged();
+                OnPropertyChanged();
             }
         }
     }
 
-    public decimal Remaining => Income - Expenses.Sum(e => e.Amount);
 
-    public void AddExpense(string description, decimal amount)
+    public decimal TotalExpenses
     {
-        Expenses.Add(new Expense { Description = description, Amount = amount });
-        OnPropertyChanged(nameof(Remaining));
+        get => totalExpenses;
+        private set
+        {
+            if (totalExpenses != value)
+            {
+                totalExpenses = value;
+                OnPropertyChanged();
+                UpdateRemainingBalance();
+            }
+        }
+    }
+
+    public decimal RemainingBalance
+    {
+        get => remainingBalance;
+        private set
+        {
+            if (remainingBalance != value)
+            {
+                remainingBalance = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    public void AddExpense(string name, decimal amount)
+    {
+        var expense = new Expense { Name = name, Amount = amount };
+        Expenses.Add(expense);
+        TotalExpenses += amount;
+    }
+
+    private void UpdateRemainingBalance()
+    {
+        RemainingBalance = TotalIncome - TotalExpenses;
     }
 
     public event PropertyChangedEventHandler PropertyChanged;
 
-    protected void OnPropertyChanged(string name) =>
+    protected void OnPropertyChanged([CallerMemberName] string name = null)
+    {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    }
 }

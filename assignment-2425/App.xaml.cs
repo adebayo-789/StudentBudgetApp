@@ -5,7 +5,7 @@ namespace StudentBudgetApp;
 
 public partial class App : Application
 {
-    public App(ExpenseListPage DashboardPage)
+    public App()
     {
         MainPage = new AppShell();
     }

@@ -1,14 +1,15 @@
 ﻿using System;
 using StudentBudgetApp.ViewModels;
 
-namespace StudentBudgetApp.Pages
+namespace StudentBudgetApp.Pages;
+
+public partial class DashboardPage : ContentPage
 {
-    public partial class DashboardPage : ContentPage
+    public DashboardPage()
     {
-        public DashboardPage(BudgetViewModel viewModel)
-        {
-            InitializeComponent();
-            BindingContext = viewModel;
-        }
+        InitializeComponent();
+        BindingContext = new BudgetViewModel();
+      
+
     }
 }

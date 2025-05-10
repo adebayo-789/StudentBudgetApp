@@ -12,16 +12,13 @@ public partial class AddExpensePage : ContentPage
         InitializeComponent();
         _viewModel = viewModel;
     }
-    private void OnAddClicked(object sender, EventArgs e)
+    private  async void OnAddClicked(object sender, EventArgs e)
     {
         if (!string.IsNullOrWhiteSpace(DescriptionEntry.Text) &&
             decimal.TryParse(AmountEntry.Text, out var amount))
         {
-            _viewModel.AddExpense(new Expense
-            {
-                Name = DescriptionEntry.Text,
-                Amount = amount
-            });
+            _viewModel.AddExpense(DescriptionEntry.Text, amount);
+            
 
             DescriptionEntry.Text = string.Empty;
             AmountEntry.Text = string.Empty;
