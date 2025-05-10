@@ -6,12 +6,16 @@
 
 
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="25">
+        <VerticalStackLayout Padding="20" Spacing="15">
 
             <Label Text="Dashboard"
                    FontSize="32"
                    HorizontalOptions="Center" />
 
+            <Label Text="Enter Total Income" FontSize="Medium" />
+            <Entry x:Name="IncomeEntry" Keyboard="Numeric" Placeholder="e.g., 1000" />
+            <Button Text="Set Income" Clicked="OnSetIncomeClicked" />
+            
             <Frame BorderColor="Gray" CornerRadius="10" Padding="15">
                 <VerticalStackLayout>
                     <Label Text="Total Income:" FontSize="20" />

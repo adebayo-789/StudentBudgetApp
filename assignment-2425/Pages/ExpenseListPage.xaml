@@ -15,8 +15,8 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <HorizontalStackLayout>
-                        <Label Text="{Binding Description}" />
-                        <Label Text="{Binding Amount}" HorizontalOptions="EndAndExpand" />
+                        <Label Text="{Binding Description}" FontSize="Medium" />
+                        <Label Text="{Binding Amount}" FontSize="Small" />
                     </HorizontalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

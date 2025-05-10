@@ -21,7 +21,7 @@ public class BudgetViewModel : INotifyPropertyChanged
             {
                 totalIncome = value;
                 OnPropertyChanged();
-                OnPropertyChanged();
+                UpdateRemainingBalance();
             }
         }
     }
@@ -69,7 +69,6 @@ public class BudgetViewModel : INotifyPropertyChanged
     public event PropertyChangedEventHandler PropertyChanged;
 
     protected void OnPropertyChanged([CallerMemberName] string name = null)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-    }
+    =>  PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    
 }

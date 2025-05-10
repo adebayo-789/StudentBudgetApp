@@ -9,7 +9,7 @@ public partial class ExpenseListPage : ContentPage
     public ExpenseListPage(BudgetViewModel viewModel)
     {
         InitializeComponent();
-        _viewModel = viewModel;
+       
         BindingContext = _viewModel;
     }
 
