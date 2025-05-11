@@ -23,12 +23,15 @@ public partial class AddExpensePage : ContentPage
             DescriptionEntry.Text = string.Empty;
             AmountEntry.Text = string.Empty;
 
-            DisplayAlert("Added", "Expense added successfully.", "OK");
+           await  DisplayAlert("Added", "Expense added successfully.", "OK");
         }
         else
         {
-            DisplayAlert("Error", "Please enter valid values.", "OK");
+             await DisplayAlert("Error", "Please enter valid values.", "OK");
+            
         }
+        await Navigation.PushAsync(new AddExpensePage(_viewModel));
+
     }
 
 }

@@ -9,7 +9,7 @@ namespace StudentBudgetApp.Models
 {
     public class Expense
     {
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
         public decimal Amount { get; set; }
     }
 }
