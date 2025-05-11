@@ -1,5 +1,6 @@
 ﻿using StudentBudgetApp.Pages;
 
+
 namespace StudentBudgetApp;
 
 public partial class AppShell : Shell
