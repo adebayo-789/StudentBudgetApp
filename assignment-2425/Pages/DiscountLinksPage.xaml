@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentBudgetApp.Pages.DiscountLinksPage"
+             Title="Discounts">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Student Discounts" FontSize="28" HorizontalOptions="Center" />
+
+            <Label Text="Tap a link below to open the discount site:" FontSize="16" />
+
+            <Button Text="UniDays" Clicked="OnUniDaysClicked" />
+            <Button Text="Student Beans" Clicked="OnStudentBeansClicked" />
+            <Button Text="Totum" Clicked="OnTotumClicked" />
+            <Button Text="Save the Student" Clicked="OnSaveTheStudentClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

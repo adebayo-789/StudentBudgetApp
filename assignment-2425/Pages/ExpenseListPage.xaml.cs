@@ -1,4 +1,5 @@
 using StudentBudgetApp.ViewModels;
+using StudentBudgetApp.Models;
 
 namespace StudentBudgetApp.Pages;
 

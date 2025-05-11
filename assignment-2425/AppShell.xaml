@@ -13,12 +13,17 @@
         <ShellContent ContentTemplate="{DataTemplate pages:ExpenseListPage}" Route="ExpenseListPage" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Settings">
-        <ShellContent ContentTemplate="{DataTemplate pages:SettingsPage}" Route="SettingsPage" />
+    <FlyoutItem Title="Discounts">
+        <ShellContent ContentTemplate="{DataTemplate pages:DiscountLinksPage}" Route="DiscountLinksPage" />
     </FlyoutItem>
 
     <FlyoutItem Title="Add Expense">
         <ShellContent ContentTemplate="{DataTemplate pages:AddExpensePage}" Route="AddExpensePage"/>
     </FlyoutItem>
+    
+    <FlyoutItem Title="Settings">
+        <ShellContent ContentTemplate="{DataTemplate pages:SettingsPage}" Route="SettingsPage" />
+    </FlyoutItem>
 
+    
 </Shell>
