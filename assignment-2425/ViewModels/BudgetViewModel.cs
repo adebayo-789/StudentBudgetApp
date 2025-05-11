@@ -54,13 +54,12 @@ public class BudgetViewModel : INotifyPropertyChanged
         }
     }
 
-    public void AddExpense(string name, decimal amount)
+    public void AddExpense(string name, decimal amount, string category)
     {
-        var expense = new Expense { Name = name, Amount = amount };
-        Expenses.Add(expense);
-        TotalExpenses += amount;
+        Expenses.Add(new Expense { Name = name, Amount = amount, Category = category });
+        OnPropertyChanged(nameof(RemainingBalance));
+        OnPropertyChanged(nameof(TotalExpenses));
     }
-
     private void UpdateRemainingBalance()
     {
         RemainingBalance = TotalIncome - TotalExpenses;

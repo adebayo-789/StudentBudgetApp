@@ -5,8 +5,12 @@
              x:Class="StudentBudgetApp.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="PageBackgroundColor">white</Color>
-                <Color x:Key="TextColor">Black</Color>
+            <Color x:Key="PrimaryColor">#4CAF50</Color>
+            <Color x:Key="SecondaryColor">#FF9800</Color>
+            <Color x:Key="BackgroundColor">#F5F5F5</Color>
+            <Color x:Key="TextPrimary">#212121</Color>
+            <Color x:Key="TextSecondary">#757575</Color>
+
             <Style TargetType="Label">
                 <Setter Property="FontSize" Value="{DynamicResource AppFontSize}" />
                 <Setter Property="TextColor" Value="{DynamicResource TextColor}" />
@@ -19,8 +23,10 @@
                 <Setter Property="FontSize" Value="{DynamicResource AppFontSize}" />
                 <Setter Property="TextColor" Value="{DynamicResource TextColor}" />
             </Style>
+            <Style TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}" />
+            </Style>
 
-            
             <x:Double x:Key="AppFontSize">16</x:Double>
 
             <ResourceDictionary.MergedDictionaries>
