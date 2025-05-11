@@ -30,6 +30,11 @@
                                        FontSize="18"
                                        TextColor="Red"
                                        HorizontalTextAlignment="End" />
+                                
+                                <Label  Grid.Column=" 2"
+                                        Text="{Binding Category}" FontAttributes="Italic" TextColor="Gray"
+                                        FontSize="18" />
+                                
                             </Grid>
                         </Frame>
                     </DataTemplate>

@@ -67,6 +67,7 @@
                                        TextColor="DarkRed"
                                        HorizontalOptions="End"
                                        Grid.Column="1" />
+                                <Label Text="{Binding Category}" FontAttributes="Italic" TextColor="Gray" />
                             </Grid>
                         </Frame>
                     </DataTemplate>
