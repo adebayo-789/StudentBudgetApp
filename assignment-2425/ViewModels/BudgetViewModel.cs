@@ -59,6 +59,7 @@ public class BudgetViewModel : INotifyPropertyChanged
         Expenses.Add(new Expense { Name = name, Amount = amount, Category = category });
         OnPropertyChanged(nameof(RemainingBalance));
         OnPropertyChanged(nameof(TotalExpenses));
+        TotalExpenses += amount;
     }
     private void UpdateRemainingBalance()
     {

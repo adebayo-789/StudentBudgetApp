@@ -20,7 +20,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
-                            <Grid ColumnDefinitions="*,Auto">
+                            <Grid ColumnDefinitions="*,*,Auto">
                                 <Label Grid.Column="0"
                                        Text="{Binding Name}"
                                        FontSize="18" />

@@ -61,13 +61,15 @@
                     <DataTemplate>
                         <Frame Padding="10" Margin="0,5" CornerRadius="10"
                                BackgroundColor="White" BorderColor="#ccc">
-                            <Grid ColumnDefinitions="*, Auto">
-                                <Label Text="{Binding Name}" FontAttributes="Bold" />
+                            <Grid ColumnDefinitions="*,*, Auto">
+                                <Label Text="{Binding Name}" FontAttributes="Bold" Grid.Column="0"/>
+                                
                                 <Label Text="{Binding Amount, StringFormat='£{0:F2}'}"
                                        TextColor="DarkRed"
                                        HorizontalOptions="End"
                                        Grid.Column="1" />
-                                <Label Text="{Binding Category}" FontAttributes="Italic" TextColor="Gray" />
+                                
+                                <Label Text="{Binding Category}" FontAttributes="Italic" TextColor="Gray" Grid.Column="2"/>
                             </Grid>
                         </Frame>
                     </DataTemplate>
